@@ -387,6 +387,20 @@ body {
   }
 }
 
+/* Mobile Safari/Chrome: avoid background resize/jitter */
+@media (max-width: 900px) {
+  body {
+    background-attachment: scroll;  /* kill fixed */
+  }
+
+  body::before {
+    position: absolute;             /* not fixed */
+    inset: -10%;                       /* no -20% */
+  }
+}
+
+
+
 
 
 
