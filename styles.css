@@ -181,16 +181,12 @@ body {
 }
 
 .modal-backdrop {
-  padding-top:    max(18px, env(safe-area-inset-top));
-  padding-right:  max(18px, env(safe-area-inset-right));
-  padding-bottom: max(18px, env(safe-area-inset-bottom));
-  padding-left:   max(18px, env(safe-area-inset-left));
-
   animation: backdropFade 250ms ease-out;
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.85);
   display: grid;
   place-items: center;
+  padding: 18px;
   z-index: 1000;
 }
 
@@ -210,9 +206,6 @@ body {
   border-radius: 22px;
   box-shadow: var(--shadow);
   padding:24px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.18) transparent;
-  box-sizing: border-box;
 }
 
 .modal::-webkit-scrollbar {
@@ -233,6 +226,11 @@ body {
 
 .modal::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.28);
+}
+
+.modal {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.18) transparent;
 }
 
 @keyframes modalPop {
@@ -269,14 +267,7 @@ body {
 }
 
 
-.modal-left, .modal-right {
-  display: grid;
-  gap: 22px;
-
-  /* IMPORTANT: center ITEMS, not the grid track */
-  justify-items: center;
-  align-content: start;
-}
+.modal-left, .modal-right { display: grid; justify-content: center; gap: 22px;}
 
 .section { padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,0.04); }
 .section-title { margin: 0 0 10px; font-size: 16px; }
@@ -333,47 +324,12 @@ body {
 .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 
 @media (max-width: 980px) {
-  .modal-content {
-    display: flex;           /* override grid */
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .modal-left,
-  .modal-right {
-    display: flex;           /* override grid */
-    flex-direction: column;
-    align-items: stretch;    /* fill full width */
-    gap: 22px;
-    width: 100%;
-  }
-
-  .modal-left > *,
-  .modal-right > * {
-    width: 100%;
-  }
-
-  /* keep poster nice and centered, but stable */
-  .poster {
-    width: 100%;
-    max-width: 420px;        /* optional: prevents it being huge */
-    margin: 0 auto;
-  }
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .modal-content { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {
-  .poster { max-width: 100%; }
+  .panel-row { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
