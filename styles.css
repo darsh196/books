@@ -349,11 +349,25 @@ body {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
   }
-  .modal-content {
-    margin-right:10px;
-    margin-left:10px;
+  .modal-left, .modal-right {
+    justify-content: stretch; /* Override center alignment */
+    width: 100%;
+  }
+
+  .section {
+    width: 100%; /* Ensure sections take full width */
+  }
+  
+  .poster {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .links {
+    width: 100%;
   }
 }
+
 
 
 
