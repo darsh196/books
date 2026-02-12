@@ -252,7 +252,7 @@ body {
   padding-top: 18px;
   padding-right: 18px; 
   display: grid;
-  grid-template-columns: minmax(200px, 340px) 1fr;;
+  grid-template-columns: minmax(200px, 340px) 1fr;
   gap: 20px;
   align-items: start;
   justify-items: center;
@@ -359,6 +359,7 @@ body {
     -ms-overflow-style: none; /* IE/Edge */
   }
 }
+
 
 
 
