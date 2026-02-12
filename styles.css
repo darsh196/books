@@ -235,6 +235,11 @@ body {
 .modal {
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.18) transparent;
+  width: min(980px, calc(100vw - 36px)); /* <- key change */
+  max-height: min(92vh, 900px);
+  overflow: auto;
+  margin: 0;          /* avoid any default margins */
+  box-sizing: border-box;
 }
 
 @keyframes modalPop {
@@ -340,11 +345,11 @@ body {
   .modal::-webkit-scrollbar {
     display: none; /* Hide scrollbar on mobile */
   }
-  
   .modal {
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
   }
 }
+
 
 
