@@ -57,6 +57,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .container { width: min(1100px, calc(100% - 32px)); margin: 0 auto; }
@@ -398,6 +399,7 @@ body {
     inset: -10%;                       /* no -20% */
   }
 }
+
 
 
 
