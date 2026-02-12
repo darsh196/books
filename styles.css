@@ -252,7 +252,7 @@ body {
   padding-top: 18px;
   padding-right: 18px; 
   display: grid;
-  grid-template-columns: minmax(200px, 340px) 1fr;
+  grid-template-columns: auto 1fr;
   gap: 20px;
   align-items: start;
   justify-items: center;
@@ -267,6 +267,7 @@ body {
   border-radius: 18px;
   border: 1px solid var(--line);
   background: rgba(0,0,0,0.25);
+  object-fit: contain;  /* Add this */
 }
 
 
@@ -332,9 +333,6 @@ body {
     grid-template-columns: 1fr; 
     padding: 18px;
   }
-  .poster {
-    margin: 0 auto;  /* Center on smaller screens */
-  }
 
   modal::-webkit-scrollbar {
     display: none; /* Hide scrollbar on mobile */
@@ -359,6 +357,7 @@ body {
     -ms-overflow-style: none; /* IE/Edge */
   }
 }
+
 
 
 
