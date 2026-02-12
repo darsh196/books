@@ -269,7 +269,7 @@ body {
 }
 
 
-.modal-left, .modal-right { display: grid; gap: 22px;}
+.modal-left, .modal-right { display: grid; gap: 22px;width: 100%;}
 
 .section { padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,0.04); }
 .section-title { margin: 0 0 10px; font-size: 16px; }
@@ -351,6 +351,7 @@ body {
     -ms-overflow-style: none; /* IE/Edge */
   }
 }
+
 
 
 
