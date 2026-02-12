@@ -335,6 +335,23 @@ body {
 @media (max-width: 980px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .modal-content { grid-template-columns: 1fr; }
+  .modal-left, .modal-right {
+    justify-content: stretch; /* Override center alignment */
+    width: 100%;
+  }
+
+  .section {
+    width: 100%; /* Ensure sections take full width */
+  }
+  
+  .poster {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .links {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -367,6 +384,7 @@ body {
     width: 100%;
   }
 }
+
 
 
 
