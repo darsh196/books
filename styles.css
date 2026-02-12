@@ -336,5 +336,15 @@ body {
   .panel-row { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
   .row { grid-template-columns: 1fr; }
+
+  .modal::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on mobile */
+  }
+  
+  .modal {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
 }
+
 
