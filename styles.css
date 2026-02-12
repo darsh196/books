@@ -249,7 +249,7 @@ body {
 .modal-meta { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
 
 .modal-content {
-  padding-top: 18px;
+  padding: 18px 0 0;
   display: grid;
   grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
   gap: 20px;
@@ -275,6 +275,11 @@ body {
 }
 
 .modal-left, .modal-right { display: grid; gap: 22px; min-width:0; width:auto;}
+
+/* critical "nothing can force overflow" rule */
+.modal-left *, .modal-right * {
+  min-width: 0;
+}
 
 .modal-content > * {
   min-width: 0;
@@ -370,6 +375,7 @@ body {
     max-width: 100%;
   }
 }
+
 
 
 
