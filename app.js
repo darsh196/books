@@ -58,6 +58,7 @@
         this.books = await res.json();
         
         await this.loadAllSummaries(); // ✅ loads rating counts for homepage cards
+        this.$forceUpdate();
       },
 
       async loadAllSummaries() {
@@ -231,6 +232,7 @@
     return String(Date.now()) + Math.random().toString(16).slice(2);
   }
 })();
+
 
 
 
