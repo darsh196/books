@@ -120,7 +120,7 @@ body {
 }
 
 .cover.big {
-  width: 220px;              /* fixed poster width */
+  width: 320px;              /* fixed poster width */
   aspect-ratio: 2 / 3;       /* portrait */
   background-size: contain;  /* show full image */
   background-repeat: no-repeat;
@@ -333,67 +333,38 @@ body {
 .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 
 @media (max-width: 980px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
-
-  /* modal becomes 1 column */
   .modal-content {
-    grid-template-columns: 1fr;
-    justify-items: stretch;
+    display: flex;           /* override grid */
+    flex-direction: column;
+    gap: 20px;
   }
 
-  /* stop any sideways overflow */
-  .modal { overflow-x: hidden; }
-
-  /* stretch the inner columns to the modal inner width */
-  .modal-left, .modal-right {
-    justify-content: stretch;
-    justify-items: stretch;
+  .modal-left,
+  .modal-right {
+    display: flex;           /* override grid */
+    flex-direction: column;
+    align-items: stretch;    /* fill full width */
+    gap: 22px;
     width: 100%;
   }
 
-  /* all bubbles fill the modal’s inner width (NOT viewport width) */
-  .section,
-  .poster,
-  .links {
+  .modal-left > *,
+  .modal-right > * {
     width: 100%;
-    max-width: 100%;
   }
 
-  /* optional: keep poster centered visually */
-  .poster { margin: 0 auto; }
+  /* keep poster nice and centered, but stable */
+  .poster {
+    width: 100%;
+    max-width: 420px;        /* optional: prevents it being huge */
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 640px) {
-  .panel-row { grid-template-columns: 1fr; }
-  .grid { grid-template-columns: 1fr; }
-  .row { grid-template-columns: 1fr; }
-
-  /* hide scrollbar on mobile */
-  .modal::-webkit-scrollbar { display: none; }
-  .modal {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    overflow-x: hidden; /* keep */
-  }
-
-  /* keep stretching behavior */
-  .modal-content { justify-items: stretch; }
-
-  .modal-left, .modal-right {
-    justify-content: stretch;
-    justify-items: stretch;
-    width: 100%;
-  }
-
-  .section,
-  .poster,
-  .links {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .poster { margin: 0 auto; }
+  .poster { max-width: 100%; }
 }
+
 
 
 
