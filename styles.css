@@ -326,10 +326,27 @@ body {
 @media (max-width: 980px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .modal-content { grid-template-columns: 1fr; }
+  modal::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on mobile */
+  }
+  
+  .modal {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
 }
 
 @media (max-width: 640px) {
   .panel-row { grid-template-columns: 1fr; }
   .grid { grid-template-columns: 1fr; }
   .row { grid-template-columns: 1fr; }
+  modal::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on mobile */
+  }
+  
+  .modal {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
 }
+
