@@ -65,9 +65,9 @@
       await Promise.all(
         this.books.map(async (b) => {
           try {
-            const res = await fetch(`${API}/api/books/${bookId}/summary?t=${Date.now()}`, { cache: "no-store" });
+            const res = await fetch(`${API}/api/books/${b.id}/summary?t=${Date.now()}`, { cache: "no-store" });
             const data = await res.json();
-            this.$set(this._apiSummary, bookId, data); // important for Vue 2 reactivity
+            this.$set(this._apiSummary, b.id, data); // important for Vue 2 reactivity
           } catch (e) {
             // ignore per-book errors
           }
@@ -121,8 +121,8 @@
       async openBook(b) {
         this.activeBook = b;
         document.body.style.overflow = "hidden";
-        await this.refreshSummary(bookId);
-        await this.loadComments(bookId);
+        await this.refreshSummary(b.id);
+        await this.loadComments(b.id);
         this.$nextTick(() => {
           this.renderTurnstile();
         });
