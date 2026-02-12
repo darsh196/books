@@ -210,6 +210,9 @@ body {
   border-radius: 22px;
   box-shadow: var(--shadow);
   padding:24px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.18) transparent;
+  box-sizing: border-box;
 }
 
 .modal::-webkit-scrollbar {
@@ -230,16 +233,6 @@ body {
 
 .modal::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.28);
-}
-
-.modal {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.18) transparent;
-  width: min(980px, calc(100vw - 36px)); /* <- key change */
-  max-height: min(92vh, 900px);
-  overflow: auto;
-  margin: 0;          /* avoid any default margins */
-  box-sizing: border-box;
 }
 
 @keyframes modalPop {
@@ -394,6 +387,7 @@ body {
 
   .poster { margin: 0 auto; }
 }
+
 
 
 
