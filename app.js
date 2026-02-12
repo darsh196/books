@@ -15,6 +15,7 @@
         author: "Darshan Goburdhone"
       },
       books: [],
+      _apiSummary: {},
       comments: [],
       query: "",
       genreFilter: "",
@@ -64,7 +65,7 @@
       await Promise.all(
         this.books.map(async (b) => {
           try {
-            const res = await fetch(`${API}/api/books/${b.id}/summary`);
+            const res = await fetch(`${API}/api/books/${b.id}/summary`, { cache: "no-store" });
             const data = await res.json();
             this.$set(this._apiSummary, b.id, data); // important for Vue 2 reactivity
           } catch (e) {
@@ -97,11 +98,11 @@
     
 
       async refreshSummary(bookId) {
-        const res = await fetch(`${API}/api/books/${bookId}/summary`);
+        const res = await fetch(`${API}/api/books/${b.id}/summary`, { cache: "no-store" });
         const data = await res.json();
 
         this._apiSummary = this._apiSummary || {};
-        this._apiSummary[bookId] = data;
+        this.$set(this._apiSummary, bookId, data);
         },
 
       async loadComments(bookId) {
