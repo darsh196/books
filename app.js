@@ -7,6 +7,8 @@
   new Vue({
     el: "#app",
     data: {
+      turnstileWidgetId: null,
+      turnstileReady: false,
       site: {
         title: "Time Empire",
         subtitle: "Stories, novels, and everything I’m building.",
@@ -55,6 +57,28 @@
         this.books = await res.json();
       },
 
+      renderTurnstile() {
+        // wait until Turnstile script is loaded
+        if (!window.turnstile) return;
+      
+        const el = document.getElementById("turnstile-box");
+        if (!el) return;
+      
+        // clear old content if any
+        el.innerHTML = "";
+      
+        this.turnstileWidgetId = window.turnstile.render("#turnstile-box", {
+          sitekey: "0x4AAAAAACa_NwyPixSSIVcn",
+          callback: () => { this.turnstileReady = true; },
+          "expired-callback": () => { this.turnstileReady = false; },
+          "error-callback": () => { this.turnstileReady = false; }
+        });
+      
+        this.turnstileReady = false;
+      },
+
+    
+
       async refreshSummary(bookId) {
         const res = await fetch(`${API}/api/books/${bookId}/summary`);
         const data = await res.json();
@@ -81,7 +105,10 @@
         document.body.style.overflow = "hidden";
         await this.refreshSummary(b.id);
         await this.loadComments(b.id);
-        },
+        this.$nextTick(() => {
+          this.renderTurnstile();
+        });
+      },
 
 
       closeBook() {
@@ -129,7 +156,7 @@
       async submitComment() {
         if (!this.activeBook) return;
 
-        const token = window.turnstile.getResponse();
+        const token = window.turnstile.getResponse(this.turnstileWidgetId);
         if (!token) {
             alert("Please verify you are human");
             return;
@@ -151,7 +178,8 @@
             this.commentDraft = { name: "", email: "", text: "" };
         }
 
-        window.turnstile.reset();
+        // 👇 THIS IS WHERE reset() GOES
+        window.turnstile.reset(this.turnstileWidgetId);
         await this.loadComments(this.activeBook.id);
         },
 
@@ -183,3 +211,4 @@
     return String(Date.now()) + Math.random().toString(16).slice(2);
   }
 })();
+
