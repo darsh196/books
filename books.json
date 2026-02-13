@@ -5,7 +5,7 @@
     "year": 2020,
     "genre": "Drama / Horror",
     "status": "Short story",
-    "blurb": "The entity keeps haunting him, even when he is at death's door.",
+    "blurb": "This entity keeps haunting us, even when we are at death's door.",
     "synopsis": "An old man on his deathbed reflects on three encounters he had with a mysterious shape-shifting entity throughout his lifetime.",
     "cover": "./covers/polymorph.jpg",
     "tags": ["Identity", "Memory", "Uncanny"],
@@ -50,7 +50,7 @@
     "year": 2017,
     "genre": "Mystery / Drama",
     "status": "Summary Available",
-    "blurb": "Inside The Reach, reality no longer matters.",
+    "blurb": "Inside The Reach, reality is immaterial.",
     "synopsis": "A detective investigates disappearances inside an old power station which serves as a gateway to an oneiric world existing beyond our plane of reality.",
     "cover": "./covers/the-reflection.png",
     "tags": ["Grief", "Guilt", "Memory"],
@@ -58,9 +58,25 @@
         { "label": "Read Now", "url": "#" }
     ]
   }
+
+  {
+    "id": "ice-rainbow",
+    "title": "Ice Rainbow",
+    "year": 2023,
+    "genre": "Thriller / Spy",
+    "status": "Summary Available",
+    "blurb": "In times of fear and paranoia, everything's allowed.",
+    "synopsis": "As the Cold War reaches its zenith, the stories of a Soviet defector, a CIA agent and US Navy pilots unfold as they attempt to uncover a deeply buried secret out within the expanse of the Bering Sea.",
+    "cover": "./covers/ice-rainbow.png",
+    "tags": ["Period", "Action", "Conspiracy"],
+    "links": [
+        { "label": "Read Now", "url": "#" }
+    ]
+  }
   
 
 ]
+
 
 
 
