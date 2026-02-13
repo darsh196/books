@@ -10,8 +10,8 @@
       turnstileWidgetId: null,
       turnstileReady: false,
       site: {
-        title: "Time Empire",
-        subtitle: "Stories, novels, and everything I’m building.",
+        title: "My Works",
+        subtitle: "Stories, novels, and everything I’m creating.",
         author: "Darshan Goburdhone"
       },
       books: [],
@@ -237,6 +237,7 @@
     return String(Date.now()) + Math.random().toString(16).slice(2);
   }
 })();
+
 
 
 
