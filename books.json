@@ -93,7 +93,7 @@
     "id": "time-empire",
     "title": "Time Empire",
     "year": 2025,
-    "genre": "Mystery / Drama",
+    "genre": "Mystery / Thriller",
     "status": "Summary Available",
     "blurb": "What if we could change the laws of time?",
     "synopsis": "Amidst a strange pandemic, an ailing detective investigates the mysterious disappearance of a woman and her daughter.",
@@ -111,17 +111,34 @@
     "genre": "Mystery / Drama",
     "status": "Summary Available",
     "blurb": "What happened to Anna?",
-    "synopsis": " After his girlfriend’s disappearance in a forest where dream, memory and reality are intertwined, a man tries to reconnect with her by returning to the area and hopefully vanquishing his demons.",
+    "synopsis": "After his girlfriend’s disappearance in a forest where dream, memory and reality are intertwined, a man tries to reconnect with her by returning to the area and hopefully vanquishing his demons.",
     "cover": "./covers/the-picnic.png",
     "tags": ["Surreal", "Love", "Identity"],
+    "links": [
+        { "label": "Read Now", "url": "#" }
+    ]
+  },
+
+  {
+    "id": "wicked-crossings",
+    "title": "Wicked Crossings",
+    "year": 2024,
+    "genre": "Mystery / Thriller",
+    "status": "Summary Available",
+    "blurb": "You wouldn't wish this on your worst enemy.",
+    "synopsis": "Within an inescapable labyrinthine ghost town, a man assumes multiple identities whilst being chased by unknown assailants.",
+    "cover": "./covers/wicked-crossings.png",
+    "tags": ["Surreal", "Action", "Identity"],
     "links": [
         { "label": "Read Now", "url": "#" }
     ]
   }
   
   
+  
 
 ]
+
 
 
 
