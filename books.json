@@ -102,11 +102,27 @@
     "links": [
         { "label": "Read Now", "url": "#" }
     ]
+  }, 
+
+  {
+    "id": "the-picnic",
+    "title": "The Picnic",
+    "year": 2024,
+    "genre": "Mystery / Drama",
+    "status": "Summary Available",
+    "blurb": "What happened to Anna?",
+    "synopsis": " After his girlfriend’s disappearance in a forest where dream, memory and reality are intertwined, a man tries to reconnect with her by returning to the area and hopefully vanquishing his demons.",
+    "cover": "./covers/the-picnic.png",
+    "tags": ["Surreal", "Love", "Identity"],
+    "links": [
+        { "label": "Read Now", "url": "#" }
+    ]
   }
   
   
 
 ]
+
 
 
 
