@@ -47,7 +47,7 @@
             return matchesGenre && hay.includes(q);
         });
 
-        // ⭐ ADD THIS PART
+        // Sort
         return list.sort((a, b) =>
             a.title.localeCompare(b.title, undefined, { sensitivity: "base" })
         );
@@ -58,7 +58,7 @@
         const res = await fetch("./books.json", { cache: "no-store" });
         this.books = await res.json();
         
-        await this.loadAllSummaries(); // ✅ loads rating counts for homepage cards
+        await this.loadAllSummaries(); // loads rating counts for homepage cards
         this.$forceUpdate();
       },
 
@@ -200,11 +200,11 @@
         const data = await res.json();
 
         if (data.ok) {
-            alert("Comment submitted for approval ❤️");
+            alert("Comment submitted for approval!");
             this.commentDraft = { name: "", email: "", text: "" };
         }
 
-        // 👇 THIS IS WHERE reset() GOES
+        
         window.turnstile.reset(this.turnstileWidgetId);
         await this.loadComments(this.activeBook.id);
         },
@@ -237,6 +237,7 @@
     return String(Date.now()) + Math.random().toString(16).slice(2);
   }
 })();
+
 
 
 
