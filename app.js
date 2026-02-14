@@ -228,7 +228,7 @@
   });
 
   function cryptoRandomId() {
-    // simple safe id
+    
     if (window.crypto && crypto.getRandomValues) {
       const a = new Uint32Array(4);
       crypto.getRandomValues(a);
@@ -237,6 +237,7 @@
     return String(Date.now()) + Math.random().toString(16).slice(2);
   }
 })();
+
 
 
 
