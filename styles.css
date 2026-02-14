@@ -132,9 +132,9 @@ body {
 }
 
 .cover.big {
-  width: 320px;              /* fixed poster width */
-  aspect-ratio: 2 / 3;       /* portrait */
-  background-size: contain;  /* show full image */
+  width: 320px;              
+  aspect-ratio: 2 / 3;       
+  background-size: contain;  
   background-repeat: no-repeat;
   background-position: center;
 
@@ -271,8 +271,8 @@ body {
 }
 
 .poster {
-  width: 100%;           /* Change this */
-  max-width: 340px;      /* Add this */
+  width: 100%;           
+  max-width: 340px;     
   height: auto;
   display: block;
   border-radius: 18px;
@@ -388,22 +388,6 @@ body {
   }
 }
 
-/* @media (max-width: 900px) {
-  body {
-    background-attachment: scroll;   /* keep this */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  body::before {
-    position: fixed;   /* IMPORTANT: follows scroll */
-    inset: 0;          /* cover the viewport */
-    animation: none;   /* remove drift to prevent glitch */
-    transform: none;   /* extra safety */
-  }
-} */
-
 
 .contact-links {
   display: inline-flex;
@@ -433,6 +417,7 @@ body {
   height: 20px;
   display: block;
 }
+
 
 
 
